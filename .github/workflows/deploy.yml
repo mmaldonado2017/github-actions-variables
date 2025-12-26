@@ -34,7 +34,7 @@ jobs:
       # # #   run: npm test
       - name: Output information
         run: |
-          echo "{{ env.MONGODB_USERNAME }}"
+          echo "${{ env.MONGODB_USERNAME }}"
           echo "$MONGODB_USERNAME"
           echo "$MONGODB_DB_NAME"
   deploy:
@@ -43,5 +43,4 @@ jobs:
     steps:
       - name: Output information
         run: | 
-          echo "{{ env.MONGODB_USERNAME }}"
           echo "$MONGODB_DB_NAME"
